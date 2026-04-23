@@ -269,14 +269,6 @@ img {
   object-position: center bottom;
 }
 
-.hero-frame-patch {
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  width: 80%;
-  pointer-events: none;
-}
-
 /* Floating Tags */
 .hero-tag {
   position: absolute;
@@ -1629,16 +1621,6 @@ img {
 }
 
 .hero-frame-image.anim-in img:first-child {
-  transform: translateY(0);
-}
-
-/* Patch follows character up */
-.hero-frame-patch {
-  transform: translateY(100%);
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
-}
-
-.hero-frame-image.anim-in .hero-frame-patch {
   transform: translateY(0);
 }
 
