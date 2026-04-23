@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/Favicon.png">
+  <title>UIUX Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Shared header component (nav + mobile menu) -->
+  <div id="site-header"></div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-layout">
+      <!-- Left: Photo Frame -->
+      <div class="hero-frame">
+        <svg class="hero-frame-svg" width="587" height="558" viewBox="0 0 587 558" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect class="frame-border" x="10" y="10" width="567" height="538" stroke="black" stroke-width="4" />
+          <rect class="frame-corner frame-corner-tl" x="2" y="2" width="16" height="16" fill="white" stroke="black"
+            stroke-width="4" />
+          <rect class="frame-corner frame-corner-tr" x="569" y="2" width="16" height="16" fill="white" stroke="black"
+            stroke-width="4" />
+          <rect class="frame-corner frame-corner-bl" x="2" y="539" width="16" height="16" fill="white" stroke="black"
+            stroke-width="4" />
+          <rect class="frame-corner frame-corner-br" x="569" y="540" width="16" height="16" fill="white" stroke="black"
+            stroke-width="4" />
+        </svg>
+        <div class="hero-frame-image">
+          <img src="assets/character.png" alt="Character illustration">
+          <img src="assets/patch.png" alt="" class="hero-frame-patch">
+        </div>
+        <!-- Floating Tags -->
+        <div class="hero-tag hero-tag-design">
+          <img src="assets/Design.png" alt="" class="hero-tag-icon">
+          Design
+        </div>
+        <div class="hero-tag hero-tag-empathy">
+          <img src="assets/Empathy.png" alt="" class="hero-tag-icon">
+          Empathy
+        </div>
+        <div class="hero-tag hero-tag-ai">
+          <img src="assets/neural-network 1.png" alt="" class="hero-tag-icon">
+          AI
+        </div>
+      </div>
+      <!-- Right: Text Content -->
+      <div class="hero-content">
+        <div class="hero-greeting">
+          <span>哈囉你好</span>
+          <img src="assets/emoji-hands.png" alt="🙌" class="hero-emoji">
+        </div>
+        <h1 class="hero-name">我是陳璦綾<br>UI/UX Designer</h1>
+        <a href="assets/UIUX-Designer-Resume.pdf" target="_blank" rel="noopener noreferrer" class="hero-resume">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>下載履歷</span>
+        </a>
+      </div>
+    </div>
+    <!-- Resize cursor (positioned by JS) -->
+    <svg class="hero-frame-cursor" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 1L2 16L6.5 12L10 18L12 17L8.5 11L14 10L2 1Z" fill="white" stroke="black" stroke-width="1.5"
+        stroke-linejoin="round" />
+    </svg>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Works Section -->
+  <section class="section section-alt" id="works">
+    <div class="container works-container">
+      <div class="section-header reveal">
+        <h2 class="section-title" data-i18n="works.title">精選作品</h2>
+      </div>
+
+      <!-- Featured Hero Cards (stacked) -->
+      <div class="featured-stack" id="featured">
+        <!-- Feature Card: TmCDF -->
+        <article class="feature-card reveal" data-accent="#f29600">
+          <div class="feature-card-content">
+            <div class="feature-card-head">
+              <div class="feature-card-logo" aria-hidden="true">
+                <img src="assets/TmCDF Logo.png" alt="TmCDF" style="height:28px;width:auto;object-fit:contain;">
+              </div>
+              <h3 class="feature-card-title" data-i18n="tmcdf.title">TmCDF 官網</h3>
+            </div>
+            <p class="feature-card-desc" data-i18n="tmcdf.desc">台灣癌症新藥多元支持基金官網的重新設計，主要負責網站的 UIUX，從網站架構的規畫到視覺設計與動態設計將網站升級。</p>
+            <div class="feature-card-actions">
+              <span class="btn-outline btn-disabled" tabindex="0" data-i18n="btn.visit">
+                前往網站
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                <span class="btn-tooltip" data-i18n="tmcdf.tooltip">網站建置中</span>
+              </span>
+              <a href="case-TmCDF.html" class="btn-filled" style="background:#f29600" data-i18n="btn.details">專案詳情</a>
+            </div>
+          </div>
+          <div class="feature-card-visual">
+            <img src="assets/TmCDF Cover.png" alt="TmCDF 官網" class="feature-cover"/>
+          </div>
+        </article>
+
+        <!-- Feature Card: 聚典資訊 -->
+        <article class="feature-card reveal" data-accent="#0081a2">
+          <div class="feature-card-content">
+            <div class="feature-card-head">
+              <div class="feature-card-logo" aria-hidden="true">
+                <img src="assets/Judian Logo.png" alt="聚典資訊" style="height:28px;width:auto;object-fit:contain;">
+              </div>
+              <h3 class="feature-card-title" data-i18n="judian.title">聚典資訊 官網</h3>
+            </div>
+            <p class="feature-card-desc" data-i18n="judian.desc">聚典資訊股份有限公司官網的重新設計，主要負責網站的 UIUX，從網站架構的規畫到視覺設計與動態設計將網站升級。</p>
+            <div class="feature-card-actions">
+              <a href="https://www.retailingdata.com.tw/" target="_blank" rel="noopener noreferrer" class="btn-outline" data-i18n="btn.visit">
+                前往網站
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+              <a href="case-judian.html" class="btn-filled" style="background:#0081a2" data-i18n="btn.details">專案詳情</a>
+            </div>
+          </div>
+          <div class="feature-card-visual">
+            <img src="assets/Judian Cover.png" alt="聚典資訊官網" class="feature-cover"/>
+          </div>
+        </article>
+      </div>
+
+      <!-- Project Grid (2 x 2) -->
+      <div class="project-grid" id="works-grid">
+        <a href="#" class="project-card reveal" style="display:none">
+          <div class="project-card-image project-card-image-light">
+            <img src="assets/badminton-cover.png" alt="羽管家 - 羽球店鋪後台管理系統" class="project-card-cover">
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title" data-i18n="card.badminton">羽管家 - 羽球店鋪後台管理系統</h3>
+            <div class="project-card-tags">
+              <span class="tag">Dashboard Design</span>
+              <span class="tag">UX Research</span>
+              <span class="tag">Webapp</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="case-metro.html" class="project-card reveal">
+          <div class="project-card-image">
+            <img src="assets/metro-cover.png" alt="台北捷運Go - 捷運導覽系統" class="project-card-cover">
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title" data-i18n="card.metro">台北捷運Go - 捷運導覽系統</h3>
+            <div class="project-card-tags">
+              <span class="tag">App Redesign</span>
+              <span class="tag">UIUX</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="case-fitness.html" class="project-card reveal">
+          <div class="project-card-image">
+            <img src="assets/fitness-cover.png" alt="我的健身工廠 - 會員APP" class="project-card-cover">
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title" data-i18n="card.fitness">我的健身工廠 - 會員APP</h3>
+            <div class="project-card-tags">
+              <span class="tag">App Redesign</span>
+              <span class="tag">UIUX</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="project-card reveal" style="display:none">
+          <div class="project-card-image">
+            <img src="assets/Daily UI COver.png" alt="Daily UI - 每日一點設計" class="project-card-cover">
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title" data-i18n="card.dailyui">Daily UI - 每日一點設計</h3>
+            <div class="project-card-tags">
+              <span class="tag">UI Design</span>
+              <span class="tag">App</span>
+              <span class="tag">Website</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-layout reveal">
+        <div class="about-photo">
+          <img src="assets/image.jpg" alt="陳璦綾" class="about-photo-img">
+        </div>
+        <div class="about-content">
+          <h2 class="section-title" data-i18n="about.title">關於我</h2>
+          <p class="about-text" data-i18n="about.p1">
+            我是一位擁有 3 年以上經驗的 UIUX 設計師，專注於數位產品的使用者體驗設計。
+          </p>
+          <p class="about-text" data-i18n="about.p2">
+            擅長將複雜的業務邏輯轉化為直覺的數位體驗，並具備從 0 到 1 建立設計系統的能力。目前鑽研如何利用 AI 工具加速需求梳理與原型製作，將模糊目標轉化為可執行的產品策略，並確保設計與開發端在技術實現上達成高效一致。
+          </p>
+          <div class="about-tools">
+            <img src="assets/figma.svg" alt="Figma" class="about-tool-icon" title="Figma">
+            <img src="assets/claude-code.svg" alt="Claude Code" class="about-tool-icon" title="Claude Code">
+            <img src="assets/illustrator.svg" alt="Illustrator" class="about-tool-icon" title="Illustrator">
+            <img src="assets/photoshop.svg" alt="Photoshop" class="about-tool-icon" title="Photoshop">
+            <img src="assets/after-effects.svg" alt="After Effects" class="about-tool-icon" title="After Effects">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared footer component (contact + go-top + captcha) -->
+  <div id="site-footer"></div>
+
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <script src="components/header.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

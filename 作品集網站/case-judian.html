@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/Favicon.png">
+  <title>聚典資訊 — 公司官網設計 | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+  <style>
+    .case-fullpage {
+      padding: 120px 24px 80px;
+      background: #f4f6f7;
+      min-height: 100vh;
+    }
+    .case-fullpage-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .case-fullpage-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 32px;
+      color: #323232;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+    .case-fullpage-back:hover {
+      opacity: 0.7;
+    }
+    .case-fullpage-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 36px;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+    }
+    .case-fullpage-figure {
+      position: relative;
+      width: 100%;
+    }
+    .case-fullpage-overlay {
+      position: absolute;
+      object-fit: contain;
+      pointer-events: none;
+    }
+    .case-fullpage-overlay.opening {
+      left: 56.37%;
+      top: 20.67%;
+      width: 37.46%;
+      height: 4.03%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .case-fullpage-overlay.anim-1 { left: 6.67%;  top: 67.27%; width: 27.71%; height: 3.005%; }
+    .case-fullpage-overlay.anim-2 { left: 36.13%; top: 67.27%; width: 27.71%; height: 3.005%; }
+    .case-fullpage-overlay.anim-3 { left: 65.58%; top: 67.27%; width: 27.75%; height: 3.005%; }
+    .case-fullpage-overlay.anim-4 { left: 6.67%;  top: 70.79%; width: 27.71%; height: 3.005%; }
+    .case-fullpage-overlay.anim-5 { left: 36.13%; top: 70.79%; width: 27.71%; height: 3.005%; }
+    .case-fullpage-overlay.anim-6 { left: 65.58%; top: 70.79%; width: 27.75%; height: 3.005%; }
+    .case-fullpage-link {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .case-fullpage-link.url-top    { left: 38.33%; top: 4.33%;  width: 23.33%; height: 0.30%; }
+    .case-fullpage-link.url-bottom { left: 38.33%; top: 98.21%; width: 23.33%; height: 0.30%; }
+  </style>
+</head>
+
+<body class="case-page">
+  <!-- Shared header component (nav + mobile menu) -->
+  <div id="site-header"></div>
+
+  <!-- Full Page Design -->
+  <main class="case-fullpage">
+    <div class="case-fullpage-inner">
+      <a href="index.html#works" class="case-fullpage-back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+        Back
+      </a>
+      <div class="case-fullpage-figure">
+        <img src="assets/portfolio-judian.png" alt="聚典資訊 官網設計" class="case-fullpage-img">
+        <img src="assets/opening-animation.gif" alt="入場動畫" class="case-fullpage-overlay opening">
+        <img src="assets/animation01.gif" alt="" class="case-fullpage-overlay anim-1">
+        <img src="assets/animation02.gif" alt="" class="case-fullpage-overlay anim-2">
+        <img src="assets/animation03.gif" alt="" class="case-fullpage-overlay anim-3">
+        <img src="assets/animation04.gif" alt="" class="case-fullpage-overlay anim-4">
+        <img src="assets/animation05.gif" alt="" class="case-fullpage-overlay anim-5">
+        <img src="assets/animation06.gif" alt="" class="case-fullpage-overlay anim-6">
+        <a href="https://www.retailingdata.com.tw/" target="_blank" rel="noopener noreferrer" class="case-fullpage-link url-top" aria-label="前往 Retailing Data 官網"></a>
+        <a href="https://www.retailingdata.com.tw/" target="_blank" rel="noopener noreferrer" class="case-fullpage-link url-bottom" aria-label="前往 Retailing Data 官網"></a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Works selector (other cases) -->
+  <div id="works-selector"></div>
+
+  <!-- Shared footer component (contact + go-top + captcha) -->
+  <div id="site-footer"></div>
+
+  <script src="components/header.js"></script>
+  <script src="components/works-selector.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

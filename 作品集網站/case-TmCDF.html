@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/Favicon.png">
+  <title>TmCDF — 作品展示 | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+  <style>
+    .case-fullpage {
+      padding: 120px 24px 80px;
+      background: #f4f6f7;
+      min-height: 100vh;
+    }
+    .case-fullpage-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .case-fullpage-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 32px;
+      color: #323232;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+    .case-fullpage-back:hover {
+      opacity: 0.7;
+    }
+    .case-fullpage-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 36px;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+    }
+    .case-fullpage-figure {
+      position: relative;
+      width: 100%;
+    }
+
+    /* Image Comparison Slider — overlaid on the long image */
+    .comparison-slider {
+      position: absolute;
+      left: 5.8%;
+      top: 9.5%;
+      width: 88.4%;
+      height: 5.35%;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: ew-resize;
+      user-select: none;
+      -webkit-user-select: none;
+      z-index: 5;
+    }
+    .comparison-slider img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+    .comparison-after {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .comparison-before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50%;
+      overflow: hidden;
+    }
+    .comparison-before img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: 100%;
+      max-width: none;
+    }
+    .comparison-handle {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 3px;
+      height: 100%;
+      background: #fff;
+      transform: translateX(-50%);
+      z-index: 10;
+      pointer-events: none;
+    }
+    .comparison-handle::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+      pointer-events: none;
+    }
+    .comparison-handle::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background: none;
+      border-left: 2.5px solid #7C7C88;
+      border-right: 2.5px solid #7C7C88;
+      border-top: none;
+      border-bottom: none;
+      pointer-events: none;
+    }
+    .comparison-label {
+      position: absolute;
+      top: 16px;
+      padding: 6px 16px;
+      background: rgba(0, 0, 0, 0.55);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-radius: 20px;
+      z-index: 5;
+      pointer-events: none;
+    }
+    .comparison-label-before {
+      left: 16px;
+    }
+    .comparison-label-after {
+      right: 16px;
+    }
+
+    /* Animation GIF overlays */
+    .case-fullpage-overlay {
+      position: absolute;
+      object-fit: contain;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .case-fullpage-overlay.anim-entrance {
+      left: 4.5%;
+      top: 55.5%;
+      width: 43.5%;
+      height: 2.65%;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .case-fullpage-overlay.anim-scroll {
+      left: 52%;
+      top: 55.5%;
+      width: 43.5%;
+      height: 2.65%;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body class="case-page">
+  <!-- Shared header component (nav + mobile menu) -->
+  <div id="site-header"></div>
+
+  <!-- Full Page Design -->
+  <main class="case-fullpage">
+    <div class="case-fullpage-inner">
+      <a href="index.html#works" class="case-fullpage-back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+        Back
+      </a>
+      <div class="case-fullpage-figure">
+        <img src="assets/portfolio-TmCDF.png" alt="TmCDF 作品展示" class="case-fullpage-img">
+        <!-- Animation GIF overlays -->
+        <img src="assets/entrance-animation.gif" alt="入場動畫設計" class="case-fullpage-overlay anim-entrance">
+        <img src="assets/scroll-animation.gif" alt="滾動動畫設計" class="case-fullpage-overlay anim-scroll">
+        <!-- Before / After Comparison Slider (overlaid on the mockup area) -->
+        <div class="comparison-slider" id="comparisonSlider">
+          <div class="comparison-after">
+            <img src="assets/After.png" alt="TmCDF After">
+          </div>
+          <div class="comparison-before" id="comparisonBefore">
+            <img src="assets/Before.png" alt="TmCDF Before" id="comparisonBeforeImg">
+          </div>
+          <div class="comparison-handle" id="comparisonHandle"></div>
+          <span class="comparison-label comparison-label-before">Before</span>
+          <span class="comparison-label comparison-label-after">After</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Works selector (other cases) -->
+  <div id="works-selector"></div>
+
+  <!-- Shared footer component (contact + go-top + captcha) -->
+  <div id="site-footer"></div>
+
+  <script src="components/header.js"></script>
+  <script src="components/works-selector.js"></script>
+  <script src="components/footer.js"></script>
+  <script src="script.js"></script>
+  <script>
+    (function() {
+      const slider = document.getElementById('comparisonSlider');
+      const before = document.getElementById('comparisonBefore');
+      const handle = document.getElementById('comparisonHandle');
+      const beforeImg = document.getElementById('comparisonBeforeImg');
+      let isDragging = false;
+
+      function setSliderPosition(x) {
+        const rect = slider.getBoundingClientRect();
+        let pos = (x - rect.left) / rect.width;
+        pos = Math.max(0, Math.min(1, pos));
+        const pct = pos * 100 + '%';
+        before.style.width = pct;
+        handle.style.left = pct;
+        beforeImg.style.width = rect.width + 'px';
+      }
+
+      slider.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        setSliderPosition(e.clientX);
+        e.preventDefault();
+      });
+      window.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        setSliderPosition(e.clientX);
+      });
+      window.addEventListener('mouseup', function() {
+        isDragging = false;
+      });
+
+      slider.addEventListener('touchstart', function(e) {
+        isDragging = true;
+        setSliderPosition(e.touches[0].clientX);
+      }, { passive: true });
+      window.addEventListener('touchmove', function(e) {
+        if (!isDragging) return;
+        setSliderPosition(e.touches[0].clientX);
+      });
+      window.addEventListener('touchend', function() {
+        isDragging = false;
+      });
+
+      // Set before image width on load and resize
+      function syncBeforeWidth() {
+        const rect = slider.getBoundingClientRect();
+        beforeImg.style.width = rect.width + 'px';
+      }
+      window.addEventListener('load', syncBeforeWidth);
+      window.addEventListener('resize', syncBeforeWidth);
+    })();
+  </script>
+</body>
+
+</html>
